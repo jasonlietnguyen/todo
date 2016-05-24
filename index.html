@@ -1,0 +1,80 @@
+<html ng-app="to-do-list">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Yesteryear|Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body ng-controller="MainController as mc">
+    
+    
+    <div class="container">
+        <h1 class="title">My To-Do List</h1>
+        <div class="main-container">
+            <div class="panel-body">
+                <form type="form form-inline" ng-submit="mc.addList(mc.newTask)">
+                    <input placeholder="Name" type="text" class="form-control" ng-model="mc.newTask.name"><br>
+                    <input placeholder="Task" type="text" class="form-control" ng-model="mc.newTask.task"><br>
+                    <input placeholder="Due Date" type="date" class="form-control" ng-model="mc.newTask.dueDate"><br>
+                    <button class="btn btn-primary center-block" type="submit"><i class="fa fa-plus" aria-hidden="true"></i> Add Task</button>
+                </form>      
+            </div>
+        </div>
+        
+            <div class="panel-body">
+                <div class="list" ng-repeat="task in mc.list" style="margin-bottom: 20px; padding:20px 0">
+                    <div class="row">
+                        <div class="col-xs-2">
+                    <h4>{{task.name}}</h4>
+                    </div>
+                        <div class="col-xs-4">
+                    <h4>{{task.task}}</h4>
+                    </div>
+                        <div class="col-xs-4">
+                    <h4>Due Date: {{task.dueDate | date}}</h4>
+                    </div>
+                        <div class="col-xs-2">
+                    <button class="btn btn-danger" ng-click="mc.removeTask($index)"><i class="fa fa-times" aria-hidden="true"></i> Remove</button>
+                        </div>
+                     </div>
+                </div>
+            </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/components/controller.js"></script>
+</body>
+</html>

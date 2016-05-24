@@ -1,0 +1,38 @@
+body {
+    background-image: url('http://wallpapercave.com/wp/GProxpt.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poiret One', cursive;
+}
+.main-container {
+    padding: 10px 20px 0 20px;
+    background-color: #555;
+    border-radius: 10px;
+    margin: 30px 400px;
+    opacity: .7;
+    -webkit-filter: drop-shadow(8px 8px 10px #222); 
+    filter: drop-shadow(8px 8px 10px #222);
+}
+.main-container:hover{
+    background-color: #333;
+}
+.title {
+    font-family: 'Poiret One', cursive;
+    color: white;
+    text-align: center;
+    font-size: 10em;
+    margin-top: 100px;
+}
+.list {
+    text-align: center;
+    background-color: #555;
+    border-radius: 10px;
+    opacity: .8;
+    padding: 10px;
+    color: white;
+    -webkit-filter: drop-shadow(8px 8px 10px #222); 
+    filter: drop-shadow(8px 8px 10px #222);
+}
+.list:hover {
+    background-color: #333;
+}
